@@ -1,0 +1,5 @@
+0, 1593559745.183526, A, 3, Oopsie
+1, 1593559795.770411, AB, 2, double hit!
+2, 1593561600.0, A, 1, risky link was a hit!
+3, 1593579600.0, A, -1, risky link was safe!
+4, 1594155600.0, A, -1, risky link was safe!

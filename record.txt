@@ -1,0 +1,122 @@
+0, 1606861446.615479, K, 3, I'm gonna scream
+1, 1606861737.742021, K, 2, 
+2, 1606863780.679525, K, 1, Sung it to myself. What kind of cookies do y'all like?
+3, 1606931999.99999, TH, -1, risky link was safe!
+4, 1606966051.123913, C, 1, Parody Facebook video got me
+5, 1607011822.342322, D, 1, 
+6, 1607028532.206679, K, 1, girlfriend sung it last night, forgot to report
+7, 1607036472.769495, B, 1, Jim blasted the music in our apartment while I was working
+8, 1607045946.408719, M, 1, 
+9, 1607094971.32461, M, 1, 
+10, 1607101323.28144, M, 1, 
+11, 1607104799.99999, JO, 1, risky link was a hit!
+12, 1607111700.746745, N, 1, I sung it to my self 
+13, 1607119967.699279, M, 1, 
+14, 1607123998.076496, M, 1, 
+15, 1607141043.182537, S, 1, The first of many.... ._.
+16, 1607191199.99999, C, 1, risky link was a hit!
+17, 1607213518.64552, P, 1, mariah carey special commercial 
+18, 1607219704.422454, D, 1, 
+19, 1607222227.85136, F, 1, When Your Roommate plays 1/2 a second of The Song while scrolling through TicTok
+20, 1607224099.955441, S, 1, Crappy remix -.- I’m so over the spin-offs
+21, 1607271203.888885, G, 1, 
+22, 1607277599.99999, O, 1, risky link was a hit!
+23, 1607287406.306541, T, 1, Motherfucking IG stories 
+24, 1607350374.111337, N, 1, I have been betrayed by my tiktok viewing
+25, 1607360386.740783, J, 1, 
+26, 1607361365.625292, BN, 1, I started singing it and I made Lizzie here it because I couldn’t die alone
+27, 1607363999.99999, BO, -1, risky link was safe!
+28, 1607450399.99999, CMO, -1, risky link was safe!
+29, 1607452895.161575, P, 1, podcast got me
+30, 1607496297.495378, K, 1, 
+31, 1607536799.99999, O, 1, risky link was a hit!
+32, 1607628949.875652, I, 1, Self hit, sang it to myself like a dum dum
+33, 1607638368.984016, J, 1, My next door teacher is playin  it loud enough for me to hear
+34, 1607659412.382246, S, 1, 
+35, 1607659427.536865, S, 1, Idk if there’s a way to do 5 at once... sorry 
+36, 1607659430.264825, S, 1, Idk if there’s a way to do 5 at once... sorry 
+37, 1607659432.137975, S, 1, Idk if there’s a way to do 5 at once... sorry 
+38, 1607659436.857138, S, 1, Idk if there’s a way to do 5 at once... sorry 
+39, 1607701620.689597, J, 1, She did it again!
+40, 1607709599.99999, MBNO, -1, risky link was safe!
+41, 1607723145.331764, C, 1, Bought a Christmas tree. Dang it
+42, 1607733130.981106, C, 1, Watching the Christmas special. No ragrets. Not even a letter
+43, 1607736456.024627, C, 1, She sang the jingle to open “joy to the world”
+44, 1607737102.489381, C, 1, The finale. Of course it’s there.
+45, 1607795999.99999, CMBALO, -1, risky link was safe!
+46, 1607798427.296964, J, 1, KUT4car ad
+47, 1607824105.89467, C, 1, Fiancée. Watched some Christmas movie.
+48, 1607828791.476856, C, 1, Stupid Christmas movies.
+49, 1607829910.51997, I, 1, 
+50, 1607829938.959004, I, 1, 
+51, 1607902779.84535, C, 1, Grocery store. Dang it HyVee
+52, 1607911790.504539, S, 1, These crappy variants are killing me
+53, 1607911803.192061, S, 1, I must perish to her omnipresence
+54, 1607968799.99999, MO, -1, risky link was safe!
+55, 1607983142.426396, J, 1, Why does she play this song EVERY DAY??
+56, 1607985734.428034, N, 1, Fucking tiktok again...
+57, 1607986627.695426, J, 1, We are dropping like flies today
+58, 1608051660.803187, L, 1, Literally just got the shortest hit. 3 chimes
+59, 1608052674.946203, L, 1, Again with the chimes
+60, 1608052713.398303, L, 1, THERE IS A GUEST OVER AND I THINK THE CHIMES ARE LIKE THEIR FUCKING TEXT ALERT TONE
+61, 1608053587.84832, L, 1, I think I'mma put some headphones on now
+62, 1608055199.99999, CMBLO, -1, risky link was safe!
+63, 1608062817.612795, I, 1, 
+64, 1608076754.567138, N, 1, 
+65, 1608076800.778046, B, 1, Jim played a tiktok in our living room
+66, 1608128951.092131, J, 1, Bublé got me again
+67, 1608130575.738426, N, 1, I was distracted and whistled to myself
+68, 1608141599.99999, O, 1, risky link was a hit!
+69, 1608152635.186113, N, 1, Remember how I said I was going to just listen to it on my own? Well this isn’t it, it’s another TikTok hit I hate it. ￼
+70, 1608168133.896496, E, 1, Asshole in traffic was blasting it on repeat (caught then very end of the song)
+71, 1608170641.954732, H, 1, I'm at crown :(
+72, 1608221835.632152, K, 1, Girlfriend caused yet another hit
+73, 1608224273.094687, L, 1, Tryna by groceries in peace but NOOOO
+74, 1608225139.29382, L, 1, Market Street is fucking dead to me
+75, 1608227999.99999, CMJBNEO, -1, risky link was safe!
+76, 1608242605.713849, T, 1, Stupid ass work trivia game with the music round
+77, 1608314399.99999, O, 1, risky link was a hit!
+78, 1608317980.702546, M, 1, 
+79, 1608341509.087314, K, 1, Restaurant screwed me.
+80, 1608346982.996435, J, 1, 
+81, 1608387224.607282, C, 1, Crystal is scrolling through IG. #killthealgorithim
+82, 1608400799.99999, CTMN, -1, risky link was safe!
+83, 1608405523.943387, M, 1, 
+84, 1608419168.832537, C, 1, Crystal keeps playing it to spite me. And I just got her an iPad 😭😰
+85, 1608431687.273529, P, 1, candlenights special
+86, 1608475091.415443, N, 1, I am weak and tiktok is enticing
+87, 1608481918.365662, J, 1, 
+88, 1608487215.352364, O, 1, fuck hulu
+89, 1608487264.455477, E, 1, Friend was playing Christmas music last night but I didn’t have signal
+90, 1608487293.097358, E, 1, Friend sang along by accident even after I warned him multiple times
+91, 1608501531.23511, F, 1, Fucking holding me down like force inhaling Stuart his asthma medication
+92, 1608501566.590809, D, 1, There is no god
+93, 1608612213.733275, R, 1, fucking the one time i check insta in MONTHS
+94, 1608647765.420082, N, 1, I really need to stop watching tiktok
+95, 1608659999.99999, BANDFL, 1, risky link was a hit!
+96, 1608746399.99999, MNFG, -2, risky link was safe!
+97, 1608777393.625712, N, 2, A friend sent me a tiktok 😭
+98, 1608780634.925726, A, 2, They started playing as I left the store. Damn you Kroger
+99, 1608820135.593886, N, 2, No longer looking at tiktok 🥴
+100, 1608823007.287818, Q, 2, 
+101, 1608823015.071509, Q, 2, 
+102, 1608829442.217766, T, 2, Spotify did it! ☹️
+103, 1608830935.76683, T, 2, Fucking A
+104, 1608831903.59994, K, 2, Girlfriend played a tiktok :)
+105, 1608832322.500661, L, 2, I was present in the room when Antonio's girlfriend played said tiktok
+106, 1608832799.99999, E, 2, risky link was a hit!
+107, 1608833121.908788, A, 2, Should not have craved tapioca.
+108, 1608919199.99999, CJBANDEO, -2, risky link was safe!
+109, 1608924231.00242, F, 2, Another TikTok, but it wasn’t opened by me, but a roommate
+110, 1608928696.371092, E, 2, 
+111, 1608929248.392715, F, 2, This is a bit rude Kelsey
+112, 1608934423.605108, E, 2, 
+113, 1608935931.068739, M, 2, 
+114, 1608959667.694992, O, 2, Fucking Reddit man
+115, 1608994409.33569, B, 2, I forgot the game wasn’t over yet and sang it to myself😅
+116, 1609002621.311723, P, 2, My brother sent me a video because he thought the game was over rip
+117, 1609005599.99999, DFO, 2, risky link was a hit!
+118, 1609005599.99999, MBNDFO, -2, risky link was safe!
+119, 1609005599.99999, MNDFEO, -2, risky link was safe!
+120, 1609005599.99999, MDFEO, -2, risky link was safe!
+121, 1609005599.99999, MBDFO, 2, risky link was a hit!
