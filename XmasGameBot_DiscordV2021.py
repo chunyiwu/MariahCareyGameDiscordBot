@@ -43,9 +43,13 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
+intents = discord.Intents.default()
+intents.members = True
+# intents.presences = True
+
 
 nest_asyncio.apply()
-client = discord.Client()
+client = discord.Client(intents=intents)
 
 channels = []
 
@@ -540,10 +544,10 @@ if ( debugMode == 0 ):
     t_bounds = [ \
                 t_game_start -  1 * dt,
                 t_game_start +  0 * dt,
-                t_game_start + 21 * dt, 
+                t_game_start + 20 * dt, 
+                t_game_start + 23 * dt,
                 t_game_start + 24 * dt,
-                t_game_start + 25 * dt,
-                t_game_start + 26 * dt]
+                t_game_start + 25 * dt]
 
     fname_record = 'record.txt'
     fname_player = 'player.txt'
@@ -567,6 +571,7 @@ elif (debugMode == 1):
     fname_link = 'links_in_play_debug.txt'
     fname_game = 'minigame_debug.txt'
     print('Time bounds defined')
+    print(t_bounds)
     
 iit_warn  = 0
 iit_start = 1
@@ -606,6 +611,9 @@ with open(fname_info, 'w+') as f:
         f.write(str(t_bounds[ii])+"\n")
 print('Info file generated')
 
+print('client.run() called')
+client.run(TOKEN, bot=True)
+print('client.run() complete')
 
 
 # =============================================================================
@@ -1534,6 +1542,11 @@ async def phase_bot_5vids():
     await chans[iichan_ann].send("Beep beep. Last chance to catch up! Five risky links are out today!", file=discord.File('pics/5vids.png'))
     
 async def phase_game_end():
+    # - resolve all unresolved videos, if applicable
+    for ii in np.arange(len(links)):
+        if ( not links[ii].has_resolved ):
+            await links[ii].resolve()
+            
     await chans[iichan_ann].send("Beep beep. The game has ended!", file=discord.File('pics/end.jpg'))
     
     # final result    
@@ -1542,7 +1555,7 @@ async def phase_game_end():
     # determine winners and losers
     points = []
     for ii in np.arange(len(players)):
-        points.append(players[ii].points[-1])
+        points.append(max(0,players[ii].points[-1]))
 
     p_max = max(points)
     p_min = min(points)
@@ -1619,7 +1632,13 @@ async def phase_bot_quit():
 # =============================================================================
              
 @client.event
+async def on_connect():
+    print('bot connected to discord')
+    
+    
+@client.event
 async def on_ready():
+    print('on_ready triggered')
     await get_channels()
     
     await load_game()
@@ -1804,9 +1823,6 @@ async def on_reaction_add(rxn, user):
                 await reset_gam()
                 
       
-client.run(TOKEN)
-    
-    
     
     
 # =============================================================================

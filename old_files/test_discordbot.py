@@ -13,9 +13,17 @@ load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
+intents = discord.Intents.default()
+intents.members = True
+# intents.presences = True
+
+
+nest_asyncio.apply()
+client = discord.Client(intents=intents)
+
 
 #nest_asyncio.apply()
-client = discord.Client()
+# client = discord.Client()
 
 channels = []
 
@@ -62,7 +70,9 @@ async def on_reaction_add(rxn, user):
     print(user.nick)
     await rxn.message.channel.send(user.nick)
 
+print('client.run() called')
 client.run(TOKEN)
+print('client.run() complete')
 
 
 
