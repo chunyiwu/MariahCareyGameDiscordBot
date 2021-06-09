@@ -15,6 +15,13 @@ Last updated on Jul 9, 2019
 @author: Chun-Yi Wu
 """
 
+"""
+Packages to install:
+    pip install asyncio
+    pip install discord
+    pip install python-dotenv
+"""
+
 
 """
 NOTES:http://www.fileformat.info/info/unicode/char/search.htm for emoji Unicode
@@ -42,7 +49,7 @@ client = discord.Client()
 
 channels = []
 
-id_teabot = 682945654489874433
+id_teabot   = 682945654489874433
 id_timerbot = 714141847035052051
 
 
@@ -67,7 +74,7 @@ phase = -1              # the phase of the game
                         #  2 - game ended
 
 # dev flag
-debugMode = 0
+debugMode = 1
 
 # bot version
 version_num = '2021.0.1'
@@ -75,7 +82,7 @@ last_update = '2020-12-12'
 
 
 # alphabet string
-alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
 
 # carrot messages
 msg_carrot_yes = \
@@ -544,6 +551,7 @@ if ( debugMode == 0 ):
     fname_game = 'minigame.txt'
 
 elif (debugMode == 1):
+    print('Program started')
     t_game_start = np.ceil(get_current_time()/3600)*3600 + 3600*-1
     dt = 3600
     
@@ -558,6 +566,7 @@ elif (debugMode == 1):
     fname_player = 'player_debug.txt'
     fname_link = 'links_in_play_debug.txt'
     fname_game = 'minigame_debug.txt'
+    print('Time bounds defined')
     
 iit_warn  = 0
 iit_start = 1
@@ -595,6 +604,7 @@ fname_info = 'info.txt'
 with open(fname_info, 'w+') as f:
     for ii in np.arange(len(t_bounds)):
         f.write(str(t_bounds[ii])+"\n")
+print('Info file generated')
 
 
 
@@ -1715,7 +1725,8 @@ async def on_message(msg):
              
         if msg.content.lower() == 'debug resolve all links':
             for ii in np.arange(len(links)):
-                await links[ii].resolve()
+                if links[ii].has_resolved:
+                    await links[ii].resolve()
             
             
             

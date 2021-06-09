@@ -6,5 +6,5 @@ save_non_project_files = False
 
 [main]
 version = 0.2.0
-recent_files = ['XmasGameBot_DiscordV2021.py', 'XmasGame_flourish_generator.py', 'record.txt', 'minigame.txt', 'player.txt']
+recent_files = ['XmasGameBot_DiscordV2021.py', 'XmasGame_flourish_generator.py', 'record.txt', 'player.txt']
 
