@@ -21,16 +21,16 @@ To set up the environment to run this bot, do the following steps:
     https://www.python.org/downloads/
     
 - Install the following packages using the installer applicable for the OS:
-    > asyncio
-    > discord
-    > python-dotenv
+    > `asyncio`
+    > `discord`
+    > `python-dotenv`
     
 - Create a file named ".env", and enter the following:
-    # .env
-    DISCORD_TOKEN = [token]
-    DISCORD_GUILD = [server name]
+    `# .env`
+    `DISCORD_TOKEN = [token]`
+    `DISCORD_GUILD = [server name]`
     
-    [token] can be obtained from the Discord Developer Portal
+    `[token]` can be obtained from the Discord Developer Portal
     
     
 **Step 3: Run the code!**
