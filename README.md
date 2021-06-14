@@ -32,7 +32,9 @@ To set up the environment to run this bot, do the following steps:
 - Create a file named ".env", and enter the following:
 
     >`# .env`
+    
     >`DISCORD_TOKEN = [token]` 
+    
     >`DISCORD_GUILD = [server name]`
 
 **Step 3: Run the code!**
@@ -44,13 +46,12 @@ To set up the environment to run this bot, do the following steps:
     * Updated the trivia and link database
     * Initial commit to GitHub
     
-* **v2.1** (Jun 14, 2021)
+* **v2.1** (Jan 04, 2021)
     * Counting everyone who has 0 or negative points as 0 at the final result
     * Adjusted the game time to end on 12/25 instead of 12/26
     * The game progress is now always shown with a score update
     * Removed the progress and credit reaction from the reaction commands
-    * Bugs fixed:
-        * The last 5 videos are not resovled before the end of game
+    * Bug fixed: The last 5 videos are not resovled before the end of game
         
 * **v2.0** (Oct 02, 2020)
     * Discord bot is ready for actual game
