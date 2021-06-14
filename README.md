@@ -2,6 +2,8 @@
 This is a bot written to manage the "All I Want for Christmas is not hearing
 'All I wantfor Christmas is You'" game. 
 
+Version 2021.0.1
+
 Programmed by Chun-Yi Wu
 
 Beta tested by Andrew Vernon, Lizzie Jouett, Antonio Roman, Angel Roman
@@ -28,21 +30,23 @@ To set up the environment to run this bot, do the following steps:
 - Create a file named ".env", and enter the following:
 
     >`# .env`       
-    >`DISCORD_TOKEN = [token]`        
+    >`DISCORD_TOKEN = [token]` (obtained from the Discord Developer Portal)
     >`DISCORD_GUILD = [server name]`
     
     
-    (`[token]` can be obtained from the Discord Developer Portal)
+    
     
     
 **Step 3: Run the code!**
 - Exectue the code using the command applicable for the OS.
 
 # Update logs   
-* v2021.0.1
+* v2021.0.1 (June 14, 2021)
     * Initial commit to GitHub
 
 
 
 # Future Updates
 * More minigames
+    * Rock paper scissors
+    
