@@ -549,10 +549,10 @@ if ( debugMode == 0 ):
                 t_game_start + 24 * dt,
                 t_game_start + 25 * dt]
 
-    fname_record = 'record.txt'
-    fname_player = 'player.txt'
-    fname_link = 'links_in_play.txt'
-    fname_game = 'minigame.txt'
+    fname_record = 'record/record.txt'
+    fname_player = 'record/player.txt'
+    fname_link = 'record/links_in_play.txt'
+    fname_game = 'record/minigame.txt'
 
 elif (debugMode == 1):
     print('Program started')
@@ -566,10 +566,10 @@ elif (debugMode == 1):
                 t_game_start +  3 * dt,
                 t_game_start +  4 * dt]
     
-    fname_record = 'record_debug.txt'
-    fname_player = 'player_debug.txt'
-    fname_link = 'links_in_play_debug.txt'
-    fname_game = 'minigame_debug.txt'
+    fname_record = 'record/record_debug.txt'
+    fname_player = 'record/player_debug.txt'
+    fname_link = 'record/links_in_play_debug.txt'
+    fname_game = 'record/minigame_debug.txt'
     print('Time bounds defined')
     print(t_bounds)
     
@@ -605,7 +605,7 @@ mg_results = []
 
 
 # write the info file
-fname_info = 'info.txt'
+fname_info = 'record/info.txt'
 with open(fname_info, 'w+') as f:
     for ii in np.arange(len(t_bounds)):
         f.write(str(t_bounds[ii])+"\n")
@@ -1658,24 +1658,24 @@ async def on_message(msg):
     if msg.channel == chans[iichan_sha]:
         if msg.content.lower() == 'list command':
             await chans[iichan_sha].send(\
-                "list player, " +\
-                "list player ext, " +\
-                "list hit, " +\
-                "list link, " +\
+                "list player\n " +\
+                "list player ext\n " +\
+                "list hit\n " +\
+                "list link\n " +\
                 "list mgr, "
                 "game phase\n" +\
-                "reset cmd, " +\
-                "reset gam, " +\
-                "reset inf, "+\
+                "reset cmd\n " +\
+                "reset gam\n " +\
+                "reset inf\n, "+\
                 "reload game\n" +\
-                "purge rsk, "+\
-                "purge ann, "+\
-                "purge pnt, "+\
-                "purge vot, "+\
-                "purge sha, "+\
+                "purge rsk\n "+\
+                "purge ann\n "+\
+                "purge pnt\n "+\
+                "purge vot\n "+\
+                "purge sha\n "+\
                 "purge adm\n"+\
                 "resolve link #\n" +\
-                "debug make link, "+\
+                "debug make link\n "+\
                 "debug resolve all links")
         
         if msg.content.lower() == "list player":
@@ -1751,10 +1751,10 @@ async def on_message(msg):
             
             
             
-        if ( "middayalert" in msg.content and msg.author.id == id_timerbot ):
+        if ( "middayalert" in msg.content ):
             await changeofday()
             
-        if ( "hourlyalert" in msg.content and msg.author.id == id_timerbot and debugMode == 1 ):
+        if ( "hourlyalert" in msg.content and debugMode == 1 ):
             await changeofday()
             
             
