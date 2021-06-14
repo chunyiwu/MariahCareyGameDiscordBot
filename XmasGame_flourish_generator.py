@@ -21,9 +21,9 @@ import re
 
 
 # define file names
-fname_player = 'player.txt'
-fname_record = 'record.txt'
-fname_info = 'info.txt'
+fname_player = 'record/player.txt'
+fname_record = 'record/record.txt'
+fname_info = 'record/info.txt'
 
 # storage 
 t_bounds = []

@@ -86,7 +86,7 @@ last_update = '2020-12-12'
 
 
 # alphabet string
-alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890"
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 # carrot messages
 msg_carrot_yes = \
@@ -119,20 +119,21 @@ img_pnt = \
         
         
 # emoji variables
-rxn_progress = '\U0001F4CA'
+rxn_progress = "\U0001F4CA"
 rxn_credit = "\U0001F389"
-rxn_reset = '\U0001F504'
-rxn_join = '\U0001F4E5'
+rxn_reset = "\U0001F504"
+rxn_join = "\U0001F4E5"
 rxn_withdraw = "\U0001F4E4"
 rxn_hit = "<:mc_album:686011859207585817>"
-rxn_group_hit = '<:mc_divacup:685130640450256915>'
+rxn_group_hit = "<:mc_divacup:685130640450256915>"
 rxn_link_hit = "<:mc_album:686011859207585817>"
 rxn_link_safe = "\U0001F44C"
 rxn_yes = "\U0001F1FE"
 rxn_no = "\U0001F1F3"
-rxn_carrot = '\U0001F955'
+rxn_carrot = "\U0001F955"
 rxn_trivia = "\U0001F4A1"
-
+white_square = "\u25A2"
+black_square = "\u25A0"
 
 
 # =============================================================================
@@ -208,10 +209,10 @@ class Player:
             text = ""
             if ( self.points[-1] > 0 ):
                 for jj in np.arange(self.points[-1]):
-                    text += "\u25A2"
+                    text += white_square
             else:
                 for jj in np.arange(-self.points[-1]):
-                    text += "\u25A0"
+                    text += black_square
                 
                 
             text += "  - " + self.name + " (" + str(int(self.points[-1])) + ")"
@@ -1344,6 +1345,7 @@ async def gam_carrot():
             txt += msg_carrot_maybe[random.randint(0,len(msg_carrot_maybe)-1)]
         
     await chans[iichan_gam].send(txt)
+    time.sleep(1.0)
                 
     # cue the switch message
     msg = await chans[iichan_gam].send( \
