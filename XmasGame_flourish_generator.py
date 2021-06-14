@@ -272,7 +272,7 @@ for ii0_t in range(0,nn_t-1):
             ii_hit += 1
         
     
-fname_flourish = 'flourish.csv'
+fname_flourish = record_dir + 'flourish.csv'
 with open(fname_flourish, 'w+', newline='') as f:
     # header
     f.write('name, category')
@@ -303,7 +303,7 @@ with open(fname_flourish, 'w+', newline='') as f:
         f.write('\n')
         
         
-fname_comment = 'comment.csv'
+fname_comment = record_dir + 'comment.csv'
 with open(fname_comment, 'w+') as f:
     for ii_hit in range(0, nn_hit):
         print(len(hits[ii_hit].comment))
