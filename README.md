@@ -27,10 +27,8 @@ To set up the environment to run this bot, do the following steps:
     
 - Create a file named ".env", and enter the following:
 
-    >`# .env`    
-    
-    >`DISCORD_TOKEN = [token]`  
-      
+    >`# .env`       
+    >`DISCORD_TOKEN = [token]`        
     >`DISCORD_GUILD = [server name]`
     
     
@@ -39,3 +37,12 @@ To set up the environment to run this bot, do the following steps:
     
 **Step 3: Run the code!**
 - Exectue the code using the command applicable for the OS.
+
+# Update logs   
+* v2021.0.1
+    * Initial commit to GitHub
+
+
+
+# Future Updates
+* More minigames
