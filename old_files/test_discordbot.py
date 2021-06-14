@@ -8,6 +8,7 @@ import os
 import nest_asyncio
 import discord
 from dotenv import load_dotenv
+import sys
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -63,7 +64,7 @@ async def on_message(msg):
     for chan in client.guilds[0].channels:
         if ( chan.name == "shadow-realm" ):
             await chan.send("bot is sleeping!")
-        exit()
+        break
 
 @client.event
 async def on_reaction_add(rxn, user):

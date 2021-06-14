@@ -611,10 +611,9 @@ with open(fname_info, 'w+') as f:
         f.write(str(t_bounds[ii])+"\n")
 print('Info file generated')
 
-print('client.run() called')
-client.run(TOKEN, bot=True)
-print('client.run() complete')
-
+# print('client.start() called')
+# client.start(TOKEN)
+# print('client.start() complete')
 
 # =============================================================================
 # async functions
@@ -1330,16 +1329,16 @@ async def gam_carrot():
     txt = 'I just looked inside my box, and '
     rand = random.random()
     if bot_has_carrot:
-        if rand < 0.5:
+        if rand < 0.45:
             txt += msg_carrot_yes[random.randint(0,len(msg_carrot_yes)-1)]
-        elif rand < 0.9:
+        elif rand < 0.90:
             txt += msg_carrot_no[random.randint(0,len(msg_carrot_no)-1)]
         else:
             txt += msg_carrot_maybe[random.randint(0,len(msg_carrot_maybe)-1)]
     else:
-        if rand < 0.5:
+        if rand < 0.45:
             txt += msg_carrot_no[random.randint(0,len(msg_carrot_no)-1)]
-        elif rand < 0.9:
+        elif rand < 0.90:
             txt += msg_carrot_yes[random.randint(0,len(msg_carrot_yes)-1)]
         else:
             txt += msg_carrot_maybe[random.randint(0,len(msg_carrot_maybe)-1)]
@@ -1747,7 +1746,8 @@ async def on_message(msg):
                 if links[ii].has_resolved:
                     await links[ii].resolve()
             
-            
+        if msg.content.lower() == 'howdy':
+            await chans[iichan_sha].send('howdy pardner')
             
             
             
@@ -1824,6 +1824,9 @@ async def on_reaction_add(rxn, user):
                 
       
     
+
+print('client.run() called')
+client.run(TOKEN)
     
 # =============================================================================
 # BOT GRAMMAR!
