@@ -1,4 +1,6 @@
 # MariahCareyGameDiscordBot
+![Teabot Logo](/pics/avatar.png)
+
 This is a bot written to manage the "All I Want for Christmas is not hearing
 'All I wantfor Christmas is You'" game. 
 
@@ -15,7 +17,7 @@ To set up the environment to run this bot, do the following steps:
 
 - Go to the Discord Developer Portal, and follow the instructions from 
     [this website](https://www.freecodecamp.org/news/create-a-discord-bot-with-python/)
-    
+
 
 **Step 2: Set up Python environment**
 - If python is not already on the machine, install python from 
@@ -32,18 +34,14 @@ To set up the environment to run this bot, do the following steps:
     >`# .env`       
     >`DISCORD_TOKEN = [token]` (obtained from the Discord Developer Portal)
     >`DISCORD_GUILD = [server name]`
-    
-    
-    
-    
-    
+
+
 **Step 3: Run the code!**
 - Exectue the code using the command applicable for the OS.
 
 # Update logs   
 * v2021.0.1 (June 14, 2021)
     * Initial commit to GitHub
-
 
 
 # Future Updates

@@ -1,16 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-XmasGame
+XmasGameBot_DiscordV2021
 
 The discord bot for managing the "All I Want for Christmas is not hearing
  'All I wantfor Christmas is You'" game.
-
-==== Future addition ====
-
-==== Version History ====
-
-Created on May 26, 2020
-Last updated on Jul 9, 2019
 
 @author: Chun-Yi Wu
 """
@@ -27,6 +20,11 @@ Packages to install:
 NOTES:http://www.fileformat.info/info/unicode/char/search.htm for emoji Unicode
 """
 
+# =============================================================================
+# Initialization
+# =============================================================================
+
+# import the packages
 import os
 import asyncio
 import nest_asyncio
@@ -39,14 +37,13 @@ import datetime
 import random
 import traceback
 
+# set up the discord environment
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
 
 intents = discord.Intents.default()
 intents.members = True
-# intents.presences = True
-
 
 nest_asyncio.apply()
 client = discord.Client(intents=intents)
@@ -612,9 +609,7 @@ with open(fname_info, 'w+') as f:
         f.write(str(t_bounds[ii])+"\n")
 print('Info file generated')
 
-# print('client.start() called')
-# client.start(TOKEN)
-# print('client.start() complete')
+
 
 # =============================================================================
 # async functions

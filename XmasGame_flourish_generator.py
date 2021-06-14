@@ -1,29 +1,25 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Dec  7 10:51:55 2020
+XmasGame_flourish_generator
 
-@author: chuny
+Generate the files for flourish animated bar chart.
+
+@author: Chun-Yi Wu
 """
 
-import os
-import asyncio
-import nest_asyncio
-import discord
-from dotenv import load_dotenv
 import numpy as np
 import csv
 import time
 import datetime
-import random
-import traceback
 import re
 
 
 
 # define file names
-fname_player = 'record/player.txt'
-fname_record = 'record/record.txt'
-fname_info = 'record/info.txt'
+record_dir = "record/" #"old_files/2020/" #
+fname_player = record_dir + 'player.txt'
+fname_record = record_dir + 'record.txt'
+fname_info   = record_dir + 'info.txt'
 
 # storage 
 t_bounds = []
