@@ -42,6 +42,7 @@ To set up the environment to run this bot, do the following steps:
 
 # Update logs 
 * **v2.1.1** (Jun 14, 2021)
+    * The preview now shows up after the risky link is resolved
     * Rearranged the directory for decluttering
     * Updated the trivia and link database
     * Initial commit to GitHub
@@ -113,6 +114,5 @@ To set up the environment to run this bot, do the following steps:
 
 # Future Updates 
 * **Admin:** Adding automated voting generation
-* **Risky link:** Showing the link preview after it is resolved
 * **Minigame:** Rock paper scissors
     

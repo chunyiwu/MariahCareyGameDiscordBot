@@ -341,6 +341,14 @@ class Link:
                     
         # get list of players 
         msg = await chans[iichan_rsk].fetch_message(self.msg_id)
+        await msg.edit( content= \
+            "**Beep beep. Risky link of the day!**\n\n" +\
+            self.url + "\n\n" + \
+            "Time to resolve: " + get_time_string(self.t_resolve-t_adjust_disp) + "\n\n" + \
+            "React with \u2705 if you watched the video!\n" +\
+            rxn_link_safe + " means this link is resolved, and the video is safe.\n"+\
+            rxn_link_hit+" means this link is resolved, and the video is a trap.")
+ 
         rxns = msg.reactions
         
         ps = []
@@ -1436,7 +1444,7 @@ async def init_link():
         t_resolve = np.ceil(t_issue/3600)*3600
     
     msg = await chans[iichan_rsk].send( \
-            "Beep beep. Risky link of the day!\n\n" +\
+            "**Beep beep. Risky link of the day!**\n\n" +\
             "<" + url + ">\n\n" + \
             "Time to resolve: " + get_time_string(t_resolve-t_adjust_disp) + "\n\n" + \
             "React with \u2705 if you watched the video!\n" +\

@@ -1,2 +1,5 @@
 0, 1623671454.222662, A, 3, wah
 1, 1623672000.0, A, -1, risky link was safe!
+2, 1623718800.0, A, -1, risky link was safe!
+3, 1623718800.0, A, -1, risky link was safe!
+4, 1623718800.0, A, 1, risky link was a hit!
