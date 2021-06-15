@@ -3,21 +3,20 @@
 This is a bot written to manage the "All I Want for Christmas is not hearing
 'All I wantfor Christmas is You'" game. 
 
-Version 2.1.1 
-
-Last updated: Jun 14, 2021
+Version 2.1.1, Last updated: Jun 14, 2021
 
 Programmed by Chun-Yi Wu, with helps from:
-* Andrew Vernon: BT[G,D], LC, TC
-* Lizzie Jouett: BT[G,D], LC, TC
-* Angel Roman: BT[D], LC, IC
-* Antonio Roman: BT[D], LC
-* Jim Hall: LC
+* Andrew Vernon: *BT[G,D], LC, TC*
+* Lizzie Jouett: *BT[G,D], LC, TC*
+* Angel Roman: *BT[D], LC, IC*
+* Antonio Roman: *BT[D], LC*
+* Jim Hall: *LC*
 
-BT - Beta Testers (G=Groupme, D=Discord)
-LC - Link Contributors
-TC - Trivia Contributors
-IC - Image Contributors
+__Legend__
+* *BT[X]* - Beta Testers (*G*=Groupme, *D*=Discord);
+* *LC* - Link Contributors;
+* *TC* - Trivia Contributors;
+* *IC* - Image Contributors
 
 # Instruction 
 To set up the environment to run this bot, do the following steps:
@@ -42,11 +41,11 @@ To set up the environment to run this bot, do the following steps:
     
 - Create a file named ".env", and enter the following:
 
-    >`# .env`
-    
-    >`DISCORD_TOKEN = [token]` 
-    
-    >`DISCORD_GUILD = [server name]`
+    ```
+    # .env
+    DISCORD_TOKEN = [token]    
+    DISCORD_GUILD = [server name]
+    ```
 
 **Step 3: Run the code!**
 
