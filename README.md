@@ -3,7 +3,9 @@
 This is a bot written to manage the "All I Want for Christmas is not hearing
 'All I wantfor Christmas is You'" game. 
 
-Version 2.1.1
+Version 2.1.1 
+
+Last updated: Jun 14, 2021
 
 Programmed by Chun-Yi Wu
 
@@ -20,6 +22,7 @@ To set up the environment to run this bot, do the following steps:
 
 
 **Step 2: Set up Python environment**
+
 - If python is not already on the machine, install python from 
     [Python](https://www.python.org/downloads/)
     
@@ -38,14 +41,15 @@ To set up the environment to run this bot, do the following steps:
     >`DISCORD_GUILD = [server name]`
 
 **Step 3: Run the code!**
+
 - Exectue the code using the command applicable for the OS.
 
 # Update logs 
 * **v2.1.1** (Jun 14, 2021)
+    * Initial commit to GitHub
     * The preview now shows up after the risky link is resolved
     * Rearranged the directory for decluttering
     * Updated the trivia and link database
-    * Initial commit to GitHub
     
 * **v2.1** (Jan 04, 2021)
     * Counting everyone who has 0 or negative points as 0 at the final result
