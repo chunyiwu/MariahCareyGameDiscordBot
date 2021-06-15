@@ -9,7 +9,12 @@ Last updated: Jun 14, 2021
 
 Programmed by Chun-Yi Wu
 
-Beta tested by Andrew Vernon, Lizzie Jouett, Antonio Roman, Angel Roman
+Helped by:
+* Andrew Vernon (GroupMe Beta Tester, Discord Beta Tester, Link Contributor, Trivia contributor)
+* Lizzie Jouett (GroupMe Beta Tester, Discord Beta Tester, Link Contributor, Trivia contributor)
+* Angel Roman (Discord Beta tester, Link Contributor, Image Contributor)
+* Antonio Roman (Discord Beta Tester, Link Contributor)
+* Jim Hall (Link Contributor)
 
 # Instruction 
 To set up the environment to run this bot, do the following steps:
