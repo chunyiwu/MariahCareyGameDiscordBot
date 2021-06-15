@@ -7,14 +7,17 @@ Version 2.1.1
 
 Last updated: Jun 14, 2021
 
-Programmed by Chun-Yi Wu
+Programmed by Chun-Yi Wu, with helps from:
+* Andrew Vernon: BT[G,D], LC, TC
+* Lizzie Jouett: BT[G,D], LC, TC
+* Angel Roman: BT[D], LC, IC
+* Antonio Roman: BT[D], LC
+* Jim Hall: LC
 
-Helped by:
-* Andrew Vernon (GroupMe Beta Tester, Discord Beta Tester, Link Contributor, Trivia contributor)
-* Lizzie Jouett (GroupMe Beta Tester, Discord Beta Tester, Link Contributor, Trivia contributor)
-* Angel Roman (Discord Beta tester, Link Contributor, Image Contributor)
-* Antonio Roman (Discord Beta Tester, Link Contributor)
-* Jim Hall (Link Contributor)
+BT - Beta Testers (G=Groupme, D=Discord)
+LC - Link Contributors
+TC - Trivia Contributors
+IC - Image Contributors
 
 # Instruction 
 To set up the environment to run this bot, do the following steps:
