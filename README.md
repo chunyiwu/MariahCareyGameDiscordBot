@@ -5,17 +5,21 @@ This is a bot written to manage the "All I Want for Christmas is not hearing
 
 Version 2.1.1, Last updated: Jun 14, 2021
 
-Programmed by Chun-Yi Wu, with helps from:
-* Andrew Vernon: *BT[G,D], LC, TC*
-* Lizzie Jouett: *BT[G,D], LC, TC*
+Code available on [GitHub](https://github.com/chunyiwu/MariahCareyGameDiscordBot)
+
+Developed by Chun-Yi Wu, with help from:
+* Andrew Vernon: *BT[G,D], LC, TC, RD*
+* Lizzie Jouett: *BT[G,D], LC, TC, RD*
+* Antonio Roman: *BT[D], LC, VC, RD*
 * Angel Roman: *BT[D], LC, IC*
-* Antonio Roman: *BT[D], LC*
 * Jim Hall: *LC*
 
 __Legend__
 * *BT[X]* - Beta Testers (*G*=Groupme, *D*=Discord);
+* *RD* - Rule Developers;
 * *LC* - Link Contributors;
 * *TC* - Trivia Contributors;
+* *VC* - Video Contributors;
 * *IC* - Image Contributors
 
 # Instruction 

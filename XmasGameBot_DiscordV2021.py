@@ -755,10 +755,11 @@ async def reset_inf():
         
         
     await chans[iichan_inf].send( \
-         "I'm a little tea-bot. Version D"+version_num+"\n "+\
+         "I'm a little tea-bot. Version v"+version_num+"\n "+\
          "Last updated on "+last_update+"\n" +\
          "\n" +\
          "Stole the idea from Tom Scott <https://www.youtube.com/watch?v=QR9FwcwxTG4> \n\n" +\
+         "See code on GitHub <https://github.com/chunyiwu/MariahCareyGameDiscordBot> \n\n" +\
          "Developer: Chun-Yi Wu\n\n"+\
          "With help from (in alphabetical order):\n    Andrew Vernon, Angel Roman, Antonio Roman, Lizzie Jouett, Jim Hall", file=discord.File('pics/credit.png'))
     
@@ -1078,16 +1079,16 @@ async def get_progress():
     await chans[iichan_cmd].send(progress_str())
     await cue_reset_cmd()
     
-async def get_credit():
-    await chans[iichan_cmd].send( \
-     "I'm a little tea-bot. Version D"+version_num+"\n "+\
-     "Last updated on "+last_update+"\n" +\
-     "\n" +\
-     "Stole the idea from Tom Scott <https://www.youtube.com/watch?v=QR9FwcwxTG4> \n\n" +\
-     "Developer: Chun-Yi Wu\n\n"+\
-     "With help from (in alphabetical order):\n    Andrew Vernon, Angel Roman, Antonio Roman, Lizzie Jouett, Jim Hall", file=discord.File('pics/credit.png'))
-    await cue_reset_cmd()
-    return 1
+# async def get_credit():
+#     await chans[iichan_cmd].send( \
+#      "I'm a little tea-bot. Version D"+version_num+"\n "+\
+#      "Last updated on "+last_update+"\n" +\
+#      "\n" +\
+#      "Stole the idea from Tom Scott <https://www.youtube.com/watch?v=QR9FwcwxTG4> \n\n" +\
+#      "Developer: Chun-Yi Wu\n\n"+\
+#      "With help from (in alphabetical order):\n    Andrew Vernon, Angel Roman, Antonio Roman, Lizzie Jouett, Jim Hall", file=discord.File('pics/credit.png'))
+#     await cue_reset_cmd()
+#     return 1
         
 async def join_game(user):
     # get the current time
@@ -1667,18 +1668,18 @@ async def on_message(msg):
                 "list player ext\n " +\
                 "list hit\n " +\
                 "list link\n " +\
-                "list mgr, "
+                "list mgr\n "
                 "game phase\n" +\
                 "reset cmd\n " +\
                 "reset gam\n " +\
-                "reset inf\n, "+\
+                "reset inf\n "+\
                 "reload game\n" +\
                 "purge rsk\n "+\
                 "purge ann\n "+\
                 "purge pnt\n "+\
-                "purge vot\n "+\
+                # "purge vot\n "+\
                 "purge sha\n "+\
-                "purge adm\n"+\
+                # "purge adm\n"+\
                 "resolve link #\n" +\
                 "debug make link\n "+\
                 "debug resolve all links")
@@ -1728,14 +1729,14 @@ async def on_message(msg):
         if msg.content.lower() == 'purge pnt':
             await chans[iichan_pnt].purge()
             
-        if msg.content.lower() == 'purge vot':
-            await chans[iichan_vot].purge()
+        # if msg.content.lower() == 'purge vot':
+        #     await chans[iichan_vot].purge()
             
         if msg.content.lower() == 'purge sha':
             await chans[iichan_sha].purge()
             
-        if msg.content.lower() == 'purge adm':
-            await chans[iichan_adm].purge()
+        # if msg.content.lower() == 'purge adm':
+        #     await chans[iichan_adm].purge()
             
             
         if msg.content.lower().startswith('resolve link '):
