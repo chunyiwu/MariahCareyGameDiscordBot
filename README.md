@@ -3,7 +3,7 @@
 This is a bot written to manage the "All I Want for Christmas is not hearing
 'All I wantfor Christmas is You'" game. 
 
-Version 2.1.1, Last updated: Jun 14, 2021
+Version 2.1.1, Last updated on Jun 14, 2021
 
 Code available on [GitHub](https://github.com/chunyiwu/MariahCareyGameDiscordBot)
 

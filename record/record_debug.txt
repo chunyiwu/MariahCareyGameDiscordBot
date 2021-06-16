@@ -3,3 +3,5 @@
 2, 1623718800.0, A, -1, risky link was safe!
 3, 1623718800.0, A, -1, risky link was safe!
 4, 1623718800.0, A, 1, risky link was a hit!
+5, 1623817800.797821, A, 2,  Chun rejoining game
+6, 1623817865.712774, A, 1, 

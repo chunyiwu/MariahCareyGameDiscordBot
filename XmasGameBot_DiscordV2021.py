@@ -755,13 +755,15 @@ async def reset_inf():
         
         
     await chans[iichan_inf].send( \
+        "==========================\n" +\
+        "__**Credits**__\n" +\
          "I'm a little tea-bot. Version v"+version_num+"\n "+\
          "Last updated on "+last_update+"\n" +\
          "\n" +\
          "Stole the idea from Tom Scott <https://www.youtube.com/watch?v=QR9FwcwxTG4> \n\n" +\
          "See code on GitHub <https://github.com/chunyiwu/MariahCareyGameDiscordBot> \n\n" +\
-         "Developer: Chun-Yi Wu\n\n"+\
-         "With help from (in alphabetical order):\n    Andrew Vernon, Angel Roman, Antonio Roman, Lizzie Jouett, Jim Hall", file=discord.File('pics/credit.png'))
+         "Developed by Chun-Yi Wu, "+\
+         "with help from Andrew Vernon, Lizzie Jouett, Antonio Roman, Angel Roman, Jim Hall", file=discord.File('pics/credit.png'))
     
 
 async def load_game():    
@@ -970,7 +972,7 @@ async def report_self(discord_id):
             hits.append(h)            
             
             await chans[iichan_cmd].send("Beep bop. Reported " + players[ind].name + " for " + str(p) + " point! \nThe channel will reset by itself in 5 second...", file=discord.File(img_pnt[p+2]))
-            await chans[iichan_pnt].send("Beep bop. Reported " + players[ind].name + " for " + str(p) + " point!", file=discord.File(img_pnt[p+2]))
+            await chans[iichan_pnt].send("Beep bop. Reported " + players[ind].name + " for " + str(p) + " point!"+"\n\n"+progress_str(), file=discord.File(img_pnt[p+2]))
             time.sleep(5.0)
             await reset_cmd()
             return
