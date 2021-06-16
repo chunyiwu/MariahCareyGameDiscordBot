@@ -8,19 +8,20 @@ Version 2.1.1, Last updated: Jun 14, 2021
 Code available on [GitHub](https://github.com/chunyiwu/MariahCareyGameDiscordBot)
 
 Developed by Chun-Yi Wu, with help from:
-* Andrew Vernon: *BT[G,D], LC, TC, RD*
-* Lizzie Jouett: *BT[G,D], LC, TC, RD*
-* Antonio Roman: *BT[D], LC, VC, RD*
-* Angel Roman: *BT[D], LC, IC*
-* Jim Hall: *LC*
+* Andrew Vernon: *Bg, Bd, L, T, R*
+* Lizzie Jouett: *Bg, Bd, L, T, R*
+* Antonio Roman: *Bd, L, V, R*
+* Angel Roman: *Bd, L, I*
+* Jim Hall: *L*
 
 __Legend__
-* *BT[X]* - Beta Testers (*G*=Groupme, *D*=Discord);
-* *RD* - Rule Developers;
-* *LC* - Link Contributors;
-* *TC* - Trivia Contributors;
-* *VC* - Video Contributors;
-* *IC* - Image Contributors
+* *Bg* - GroupMe Beta Tester
+* *Bd* - Discord Best Tester
+* *R* - Rule Developers
+* *L* - Link Contributors
+* *T* - Trivia Contributors
+* *V* - Video Contributors
+* *I* - Image Contributors
 
 # Instruction 
 To set up the environment to run this bot, do the following steps:

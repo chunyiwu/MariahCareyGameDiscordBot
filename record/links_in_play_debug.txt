@@ -4,3 +4,4 @@
 3, https://www.youtube.com/watch?v=3Kw1BT6hY9Q, 1623715897.317373, 1623718800.0, 854151128806981673, False
 4, https://www.youtube.com/watch?v=y8N80Fprmxc, 1623801415.736227, 1623801600.0, 854509816802312193, True
 5, https://www.youtube.com/watch?v=Mj2gV6WUF3U, 1623816458.063867, 1623819600.0, 854572909373030442, True
+6, https://www.youtube.com/watch?v=CJU7Siaifo8, 1623817060.038264, 1623819600.0, 854575434142580767, True
