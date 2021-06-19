@@ -12,3 +12,9 @@
 11, https://www.youtube.com/watch?v=1wnE4vF9CQ4, 1623851432.97769, 1623852000.0, 854719604390625330, False
 12, https://www.youtube.com/watch?v=aKl2MYlCno8, 1623851476.193571, 1623852000.0, 854719786717020201, True
 13, https://www.youtube.com/watch?v=NogC2IkaaAI, 1623851560.281119, 1623852000.0, 854720138515447841, False
+14, https://www.youtube.com/watch?v=vI7EJKsNfkk, 1623851638.389026, 1623852000.0, 854720465872617502, False
+15, https://www.youtube.com/watch?v=fVvjuUcYG_M, 1624068196.451644, 1624071600.0, 855628776573763585, False
+16, https://www.youtube.com/watch?v=9vu4AN2bc-M, 1624068277.237894, 1624071600.0, 855629115666858014, True
+17, https://www.youtube.com/watch?v=ocXD-E9YOIc, 1624068321.201408, 1624071600.0, 855629300321484831, True
+18, https://www.youtube.com/watch?v=JZFbiDB9TAE, 1624068461.893885, 1624071600.0, 855629890450620446, False
+19, https://www.youtube.com/watch?v=lZGF0iTnuFw, 1624068750.54282, 1624071600.0, 855631101821059092, False

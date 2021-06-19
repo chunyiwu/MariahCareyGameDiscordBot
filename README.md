@@ -8,9 +8,9 @@ Version 2.1.1, Last updated on Jun 14, 2021
 Code available on [GitHub](https://github.com/chunyiwu/MariahCareyGameDiscordBot)
 
 Developed by Chun-Yi Wu, with help from:
-* Andrew Vernon: *Bg, Bd, L, T, R*
-* Lizzie Jouett: *Bg, Bd, L, T, R*
-* Antonio Roman: *Bd, L, V, R*
+* Andrew Vernon: *Bg, Bd, R, L, T*
+* Lizzie Jouett: *Bg, Bd, R, L, T*
+* Antonio Roman: *Bd, R, L, V*
 * Angel Roman: *Bd, L, I*
 * Jim Hall: *L*
 
@@ -57,6 +57,13 @@ To set up the environment to run this bot, do the following steps:
 - Exectue the code using the command applicable for the OS.
 
 # Update logs 
+* **v2.1.2** (Jun 18, 2021)
+    * Removed undesired shadow realm commands
+    * Shows the progress when reporting a point change
+    * Added the ability to abort a self report
+    * Added showing progress in the shadow realm for debug purpose
+    * Made changes to the info channel in accordance to the rule changes
+    
 * **v2.1.1** (Jun 14, 2021)
     * Initial commit to GitHub
     * The preview now shows up after the risky link is resolved
@@ -129,6 +136,7 @@ To set up the environment to run this bot, do the following steps:
     * Allows user to give points to other player, in case the other player didn't report a hit
 
 # Future Updates 
-* **Admin:** Adding automated voting generation
+* **Minigame:** Memes
 * **Minigame:** Rock paper scissors
+* **Admin:** Adding automated voting generation
     

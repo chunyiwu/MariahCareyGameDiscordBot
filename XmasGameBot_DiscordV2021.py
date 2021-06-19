@@ -60,7 +60,7 @@ id_timerbot = 714141847035052051
 # =============================================================================
 
 # game time
-game_year   = 2020      # year of the game
+game_year   = 2021      # year of the game
 game_month  =   12      # month of the game
 timezone    =   -6      # offset from UTC ( CST = -6)
 
@@ -78,8 +78,8 @@ phase = -1              # the phase of the game
 debugMode = 1
 
 # bot version
-version_num = '2.1.1'
-last_update = '2021-06-14'
+version_num = '2.1.2'
+last_update = '2021-06-18'
 
 
 # alphabet string
@@ -200,9 +200,13 @@ class Player:
     
     def to_string(self, mode):
         if ( mode == "shadow" ):
+            # for displaying in shadow realm
+            # [name] ([points], [mg_points])
             return self.name + " (" + str(int(self.points[-1])) + "," + str(int(self.points_mg)) + ")"
         
         elif ( mode == "progress" ):            
+            # progress mode
+            # [points bar] - [name] ([points])
             text = ""
             if ( self.points[-1] > 0 ):
                 for jj in np.arange(self.points[-1]):
@@ -215,7 +219,9 @@ class Player:
             text += "  - " + self.name + " (" + str(int(self.points[-1])) + ")"
             return text
         
-        elif ( mode == "print" ):       
+        elif ( mode == "print" ):
+            # print mode: for creating the record file
+            # [name], [discord id], [time when joined], [starting points]
             return self.name + ", " + str(self.discord_id) + ", " + str(self.times[0]) + ", " + str(self.points[0])
         
         else:
@@ -254,6 +260,7 @@ class Hit:
     
     def to_string(self, mode):
         if ( mode == "shadow" ):
+            # for displaying in shadow realm
             text = get_time_string(self.time)
             text += " | "
             for ii in np.arange(len(self.player)):
@@ -261,6 +268,7 @@ class Hit:
             text += " | " + str(self.points) + " | " + self.comment
             
         elif ( mode == "print" ):
+            # for making record file
             text = str(self.time) + ", "
             for ii in np.arange(len(self.player)):
                 text += alphabet[find_player(self.player[ii].discord_id)]
@@ -304,12 +312,14 @@ class Link:
     
     def to_string(self, mode):
         if ( mode == "shadow" ):
+            # for displaying in shadow realm
             text = "<" + self.url +">" + \
                     " | " + get_time_string(self.t_issue) +\
                     " | " + get_time_string(self.t_resolve) +\
                     " | " + str(self.msg_id)
             
         elif ( mode == "print" ):
+            # for making record file
             text = self.url + \
                 ", " + str(self.t_issue) + \
                 ", " + str(self.t_resolve) + \
@@ -340,15 +350,7 @@ class Link:
             pt = pt * 2
                     
         # get list of players 
-        msg = await chans[iichan_rsk].fetch_message(self.msg_id)
-        await msg.edit( content= \
-            "**Beep beep. Risky link of the day!**\n\n" +\
-            self.url + "\n\n" + \
-            "Time to resolve: " + get_time_string(self.t_resolve-t_adjust_disp) + "\n\n" + \
-            "React with \u2705 if you watched the video!\n" +\
-            rxn_link_safe + " means this link is resolved, and the video is safe.\n"+\
-            rxn_link_hit+" means this link is resolved, and the video is a trap.")
- 
+        msg = await chans[iichan_rsk].fetch_message(self.msg_id) 
         rxns = msg.reactions
         
         ps = []
@@ -380,6 +382,15 @@ class Link:
             await msg.add_reaction(rxn_link_hit)
         else:
             await msg.add_reaction(rxn_link_safe)
+            
+        # add in the preview
+        await msg.edit( content= \
+            "**Beep beep. Risky link of the day!**\n\n" +\
+            self.url + "\n\n" + \
+            "Time to resolve: " + get_time_string(self.t_resolve-t_adjust_disp) + "\n\n" + \
+            "React with \u2705 if you watched the video!\n" +\
+            rxn_link_safe + " means this link is resolved, and the video is safe.\n"+\
+            rxn_link_hit+" means this link is resolved, and the video is a trap.")
         
 class MiniGameResult:
     # -------------------------------------------------------------------------
@@ -414,6 +425,7 @@ class MiniGameResult:
     
     def to_string(self, mode):
         if ( mode == "shadow" ):
+            # for displaying in shadow realm
             text = datetime.datetime.fromtimestamp(self.time).strftime("%Y-%m-%d %H:%M:%S")
             text += " | "
             for ii in np.arange(len(self.player)):
@@ -421,6 +433,7 @@ class MiniGameResult:
             text += " | " + str(self.points) + " | " + self.comment
             
         elif ( mode == "print" ):
+            # for making record files
             text = str(self.time) + ", "
             for ii in np.arange(len(self.player)):
                 text += alphabet[find_player(self.player[ii].discord_id)]
@@ -716,13 +729,13 @@ async def reset_inf():
     await chans[iichan_inf].send(\
         "==========================\n" +\
         "__**Rule Summary**__\n" +\
-        "The game starts on 12/01 at noon, and ends on 12/26 at noon.\n" +\
-        "After 12/22 at noon, the game enters the 'Mariah Carey Merry Christmas Bonus Period,' and every point changes are doubled!\n" +\
+        "The game starts on 12/01 at noon, and ends on 12/25 at noon.\n" +\
+        "After 12/21 at noon, the game enters the 'Mariah Carey Merry Christmas Bonus Period,' and every point changes are doubled!\n" +\
         "\n" +\
         "Every time you hear the song, you get a hit, and you report it in the <#682942694946897990> channel.\n" +\
         "\n" +\
         "__What counts as hits?__\n" +\
-        "The following count as hits (if heard for more than one second):\n" +\
+        "The following count as hits:\n" +\
         "- Hearing the song\n" +\
         "- Hearing covers of the song, including mashups, parodies\n" +\
         "- Someone singing the song/parodies\n" +\
@@ -730,7 +743,7 @@ async def reset_inf():
         "\n" +\
         "The following don’t count as hits:\n" +\
         "- Thinking/dreaming about the song\n" +\
-        "- Hearing something that counts as another hit from the same source within 10 minutes (e.g. a 3-minute video that features the song 5 times will count only as 1 hit instead of 5)\n" +\
+        "- Hearing it again within 10 minutes\n" +\
         "\n" +\
         "__Details__\n" +\
         "For more details, refer to the rulebook and the video:\n" +\
@@ -927,7 +940,7 @@ async def report_self(discord_id):
         await chans[iichan_cmd].send("Beep. Seems like you're currently taking a break from the game? Please rejoin before reporting the hit!")
         
     else:
-        await chans[iichan_cmd].send("Beep Bop. Comment within the next 60 seconds if you would like to do so, or type 'x' to skip!")
+        await chans[iichan_cmd].send("Beep Bop. Comment within the next 60 seconds if you would like to do so, or type 'x' to skip! Type 'nvm' if it's a misclick!")
         
         try:
             def same_user(msg):
@@ -947,6 +960,9 @@ async def report_self(discord_id):
                 
                 await chans[iichan_cmd].send("Beep bop. Reported " + players[ind].name + " for " + str(p) + " point!", file=discord.File(img_pnt[p+2]))
                 await chans[iichan_pnt].send("Beep bop. Reported " + players[ind].name + " for " + str(p) + " point!"+"\n\n"+progress_str(), file=discord.File(img_pnt[p+2]))
+                
+            elif msg.content.lower() == 'nvm':
+                await chans[iichan_cmd].send("Beep bop. Aborting the hit reporting.")
                 
             else:
                 p = max(1,first_penalty-len(hits))
@@ -1069,13 +1085,13 @@ async def report_group(discord_id):
     await cue_reset_cmd()
     return 1
     
-async def get_rulebook():
-    await chans[iichan_cmd].send( \
-        "Beep beep. Here are the links for the rules.\n"+\
-        " Video: https://www.youtube.com/watch?v=PZMkieVQ7sE\n"+\
-        "Document: <https://docs.google.com/document/d/1xL8KjpuLV6iIMnEVUReq1Bf9AmxSlhGobNYjMAA4mKw/edit?usp=sharing>")
-    await cue_reset_cmd()
-    return 1
+# async def get_rulebook():
+#     await chans[iichan_cmd].send( \
+#         "Beep beep. Here are the links for the rules.\n"+\
+#         " Video: https://www.youtube.com/watch?v=PZMkieVQ7sE\n"+\
+#         "Document: <https://docs.google.com/document/d/1xL8KjpuLV6iIMnEVUReq1Bf9AmxSlhGobNYjMAA4mKw/edit?usp=sharing>")
+#     await cue_reset_cmd()
+#     return 1
     
 async def get_progress():
     await chans[iichan_cmd].send(progress_str())
@@ -1156,7 +1172,7 @@ async def join_game(user):
                 "Beep beep. Welcome " + p.name + " to the game!" )
         else:
             await chans[iichan_cmd].send( \
-                "Beep beep. Welcome " + p.name + " to the game! You're starting with " + p0 + " points!" )
+                "Beep beep. Welcome " + p.name + " to the game! You're starting with " + str(p0) + " points!" )
         
         
     await cue_reset_cmd()
@@ -1387,8 +1403,8 @@ async def gam_carrot():
                 await cue_reset_gam()
                 return
             pl = players[ii_pl]
-            mgr = MiniGameResult(tnow,[pl],100,"won carrot",True)
-            pl.mgpoint_change(100)
+            mgr = MiniGameResult(tnow,[pl],120,"won carrot",True)
+            pl.mgpoint_change(120)
         else:
             await chans[iichan_gam].send("Oopsie! I have the carrot \U0001F955! Better luck next time!")
             ii_pl = find_player(user.id)
@@ -1396,8 +1412,8 @@ async def gam_carrot():
                 await cue_reset_gam()
                 return
             pl = players[ii_pl]
-            mgr = MiniGameResult(tnow,[pl],-100,"lost carrot",True)
-            pl.mgpoint_change(-100)
+            mgr = MiniGameResult(tnow,[pl],-120,"lost carrot",True)
+            pl.mgpoint_change(-120)
             
         mg_results.append(mgr)
         
@@ -1666,25 +1682,26 @@ async def on_message(msg):
     if msg.channel == chans[iichan_sha]:
         if msg.content.lower() == 'list command':
             await chans[iichan_sha].send(\
-                "list player\n " +\
-                "list player ext\n " +\
-                "list hit\n " +\
-                "list link\n " +\
-                "list mgr\n "
+                "list player\n" +\
+                "list player ext\n" +\
+                "list hit\n" +\
+                "list link\n" +\
+                "list minigame\n"
                 "game phase\n" +\
-                "reset cmd\n " +\
-                "reset gam\n " +\
-                "reset inf\n "+\
+                "show progress\n" +\
+                "reset command\n" +\
+                "reset minigames\n" +\
+                "reset info\n"+\
                 "reload game\n" +\
-                "purge rsk\n "+\
-                "purge ann\n "+\
-                "purge pnt\n "+\
-                # "purge vot\n "+\
-                "purge sha\n "+\
-                # "purge adm\n"+\
+                "purge rsk\n"+\
+                "purge ann\n"+\
+                "purge pnt\n"+\
+                "purge sha\n"+\
                 "resolve link #\n" +\
-                "debug make link\n "+\
-                "debug resolve all links")
+                "debug make link\n"+\
+                "debug resolve all links\n" +\
+                "howdy\n"+\
+                "")
         
         if msg.content.lower() == "list player":
             await sr_list_user()
@@ -1698,20 +1715,23 @@ async def on_message(msg):
         if msg.content.lower() == "list link":
             await sr_list_link()
             
-        if msg.content.lower() == "list mgr":
+        if msg.content.lower() == "list minigame":
             await sr_list_mgr()
             
         if msg.content.lower() == 'game phase':
             await sr_game_status()
             
+        if msg.content.lower() == 'show progress':
+            await chans[iichan_sha].send(progress_str())
             
-        if msg.content.lower() == 'reset cmd':
+            
+        if msg.content.lower() == 'reset command':
             await reset_cmd()
             
-        if msg.content.lower() == 'reset gam':
+        if msg.content.lower() == 'reset minigames':
             await reset_gam()
             
-        if msg.content.lower() == 'reset inf':
+        if msg.content.lower() == 'reset info':
             await reset_inf()
             
         if msg.content.lower() == 'reload game':
@@ -1731,14 +1751,8 @@ async def on_message(msg):
         if msg.content.lower() == 'purge pnt':
             await chans[iichan_pnt].purge()
             
-        # if msg.content.lower() == 'purge vot':
-        #     await chans[iichan_vot].purge()
-            
         if msg.content.lower() == 'purge sha':
             await chans[iichan_sha].purge()
-            
-        # if msg.content.lower() == 'purge adm':
-        #     await chans[iichan_adm].purge()
             
             
         if msg.content.lower().startswith('resolve link '):
@@ -1753,6 +1767,7 @@ async def on_message(msg):
             for ii in np.arange(len(links)):
                 if links[ii].has_resolved:
                     await links[ii].resolve()
+            
             
         if msg.content.lower() == 'howdy':
             await chans[iichan_sha].send('howdy pardner')
@@ -1783,9 +1798,9 @@ async def on_reaction_add(rxn, user):
                 await chans[iichan_sha].send(user.name+"; progress")
                 await get_progress()
                 
-            elif ( rxn.emoji == rxn_credit ):
-                await chans[iichan_sha].send(user.name+"; credit")
-                await get_credit()
+            # elif ( rxn.emoji == rxn_credit ):
+            #     await chans[iichan_sha].send(user.name+"; credit")
+            #     await get_credit()
                 
             elif ( rxn.emoji == rxn_reset ):
                 await chans[iichan_sha].send(user.name+"; reset command")

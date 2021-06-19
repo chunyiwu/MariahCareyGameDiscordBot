@@ -4,7 +4,7 @@ save_data_on_exit = True
 save_history = True
 save_non_project_files = False
 project_type = empty-project-type
-recent_files = ['XmasGameBot_DiscordV2021.py', 'README.md', 'readme_update.txt']
+recent_files = ['XmasGameBot_DiscordV2021.py', 'README.md', 'readme_update.txt', '.gitignore']
 
 [main]
 version = 0.2.0
