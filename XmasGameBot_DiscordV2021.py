@@ -128,6 +128,7 @@ rxn_link_safe = "\U0001F44C"
 rxn_yes = "\U0001F1FE"
 rxn_no = "\U0001F1F3"
 rxn_carrot = "\U0001F955"
+rxn_rpsls = "\U0001F44B"
 rxn_trivia = "\U0001F4A1"
 white_square = "\u25A2"
 black_square = "\u25A0"
@@ -703,9 +704,11 @@ async def reset_gam():
         "What would you like to play?\n" +\
         "\n" +\
         rxn_carrot + " - carrot in a box\n" +\
+        rxn_rpsls + " -rock paper scissors lizard spock\n" +\
         rxn_trivia + " - random trivia\n" +\
         "============================")
     await msg.add_reaction(rxn_carrot)
+    await msg.add_reaction(rxn_rpsls)
     await msg.add_reaction(rxn_trivia)
     return 1
     
@@ -1332,6 +1335,157 @@ async def sr_debug_msg(msg):
 # -----------------------------------------------------------------------------
 # mini games functions
 # -----------------------------------------------------------------------------
+
+async def gam_rpsls():
+    # rock paper scissors lizaard spock
+    # # constants
+    # dec_roc = 0
+    # dec_pap = 1
+    # dec_sci = 2
+    # dec_liz = 3
+    # dec_spk = 4
+    
+    #  emojis
+    rxn_roc = "\u270A"
+    rxn_pap = "\U0001f590"
+    rxn_sci = "\u270C"
+    rxn_liz = "\U0001f90f"
+    rxn_spk = "\U0001f596"
+    
+    rxns = [rxn_roc, rxn_pap, rxn_sci, rxn_liz, rxn_spk]
+    
+    # result table (-1=lose, 0=draw, +1=win)
+    result_table = np.zeros((5,5))
+    result_table[0,1] = +1; result_table[1,0] = -1
+    result_table[0,2] = -1; result_table[2,0] = +1
+    result_table[0,3] = -1; result_table[3,0] = +1
+    result_table[0,4] = +1; result_table[4,0] = -1
+    result_table[1,2] = +1; result_table[2,1] = -1
+    result_table[1,3] = +1; result_table[3,1] = -1
+    result_table[1,4] = -1; result_table[4,1] = +1
+    result_table[2,3] = -1; result_table[3,2] = +1
+    result_table[2,4] = +1; result_table[4,2] = -1
+    result_table[3,4] = -1; result_table[4,3] = +1
+    
+    
+    # decide what the bot is going to play
+    bot_gesture = int(np.floor(random.random()*5))
+    
+    # send the message to the channel
+    msg = await chans[iichan_gam].send( \
+        "Rock Paper Scissors Lizard Spock!", \
+        file = discord.File('pics/rpsls.png'))
+    
+    await msg.add_reaction(rxn_roc)
+    await msg.add_reaction(rxn_pap)
+    await msg.add_reaction(rxn_sci)
+    await msg.add_reaction(rxn_liz)
+    await msg.add_reaction(rxn_spk)
+    
+    # get response from player
+    try:
+        rxn, user = await client.wait_for('reaction_add', timeout=60.0, check=check_rxn_not_by_bot)
+        tnow = get_current_time()
+        
+        
+        
+        if rxn.emoji == rxn_roc:
+            pla_gesture = 0
+        elif rxn.emoji == rxn_pap:
+            pla_gesture = 1
+        elif rxn.emoji == rxn_sci:
+            pla_gesture = 2
+        elif rxn.emoji == rxn_liz:
+            pla_gesture = 3
+        elif rxn.emoji == rxn_spk:
+            pla_gesture = 4
+        else:
+            await chans[iichan_gam].send("Um... that's not one of the options")
+            await cue_reset_gam()
+            return
+            
+        # print(rxn.emoji)
+        # print(pla_gesture)
+        
+        result = result_table[bot_gesture][pla_gesture]
+        
+        await chans[iichan_gam].send(rxns[bot_gesture])
+        
+        if result == -1:
+            await chans[iichan_gam].send("You lost!")
+            ii_pl = find_player(user.id)
+            if ii_pl < 0:
+                await cue_reset_gam()
+                return
+            pl = players[ii_pl]
+            mgr = MiniGameResult(tnow, [pl], -100, "lost RSPLP", True)
+            pl.mgpoint_change(-100)
+        elif result == 0:
+            await chans[iichan_gam].send("It's a tie!")
+            ii_pl = find_player(user.id)
+            if ii_pl < 0:
+                await cue_reset_gam()
+                return
+            pl = players[ii_pl]
+            mgr = MiniGameResult(tnow, [pl], 0, "tied in RSPLP", True)
+            pl.mgpoint_change(0)
+        elif result == +1:
+            await chans[iichan_gam].send("You won!")
+            ii_pl = find_player(user.id)
+            if ii_pl < 0:
+                await cue_reset_gam()
+                return
+            pl = players[ii_pl]
+            mgr = MiniGameResult(tnow, [pl], 100, "win RSPLP", True)
+            pl.mgpoint_change(100)
+            
+        
+        # if ( rxn.emoji == rxn_yes ):
+        #     box_switched = True
+             
+        # elif ( rxn.emoji == rxn_no ):
+        #     box_switched = False
+            
+        # else:
+            
+        
+        # if ( (box_switched and bot_has_carrot) or (not box_switched and not bot_has_carrot) ):
+        #     await chans[iichan_gam].send("Congratulations! You got the carrot!")
+        #     ii_pl = find_player(user.id)
+        #     if ii_pl < 0 :
+        #         await cue_reset_gam()
+        #         return
+        #     pl = players[ii_pl]
+        #     mgr = MiniGameResult(tnow,[pl],120,"won carrot",True)
+        #     pl.mgpoint_change(120)
+        # else:
+        #     await chans[iichan_gam].send("Oopsie! I have the carrot \U0001F955! Better luck next time!")
+        #     ii_pl = find_player(user.id)
+        #     if ii_pl < 0 :
+        #         await cue_reset_gam()
+        #         return
+        #     pl = players[ii_pl]
+        #     mgr = MiniGameResult(tnow,[pl],-120,"lost carrot",True)
+        #     pl.mgpoint_change(-120)
+            
+        mg_results.append(mgr)
+        
+        await cue_reset_gam()
+        return
+        
+    except asyncio.TimeoutError:
+        await chans[iichan_gam].send('You took too long! Call me again if you wanna play!')
+        time.sleep(5.0)
+        await reset_gam()
+        return
+        
+    else:
+        await chans[iichan_gam].send('Something went wrong?')
+        time.sleep(5.0)
+        await reset_gam()
+        return
+    
+    
     
 async def gam_carrot():
     # decide if the bot has the carrot
@@ -1403,8 +1557,8 @@ async def gam_carrot():
                 await cue_reset_gam()
                 return
             pl = players[ii_pl]
-            mgr = MiniGameResult(tnow,[pl],120,"won carrot",True)
-            pl.mgpoint_change(120)
+            mgr = MiniGameResult(tnow,[pl],90,"won carrot",True)
+            pl.mgpoint_change(90)
         else:
             await chans[iichan_gam].send("Oopsie! I have the carrot \U0001F955! Better luck next time!")
             ii_pl = find_player(user.id)
@@ -1412,8 +1566,8 @@ async def gam_carrot():
                 await cue_reset_gam()
                 return
             pl = players[ii_pl]
-            mgr = MiniGameResult(tnow,[pl],-120,"lost carrot",True)
-            pl.mgpoint_change(-120)
+            mgr = MiniGameResult(tnow,[pl],-90,"lost carrot",True)
+            pl.mgpoint_change(-90)
             
         mg_results.append(mgr)
         
@@ -1835,6 +1989,10 @@ async def on_reaction_add(rxn, user):
             if ( rxn.emoji == rxn_carrot ):
                 await chans[iichan_sha].send(user.name+"; carrot")
                 await gam_carrot()
+                
+            if ( rxn.emoji == rxn_rpsls ):
+                await chans[iichan_sha].send(user.name+"; rspls")
+                await gam_rpsls()
             
             elif rxn.emoji == rxn_trivia:
                 await chans[iichan_sha].send(user.name+"; trivia")

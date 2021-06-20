@@ -3,7 +3,7 @@
 This is a bot written to manage the "All I Want for Christmas is not hearing
 'All I wantfor Christmas is You'" game. 
 
-Version 2.1.2, Last updated on Jun 18, 2021
+Version 2.2, Last updated on Jun 20, 2021
 
 Code available on [GitHub](https://github.com/chunyiwu/MariahCareyGameDiscordBot)
 
@@ -57,6 +57,10 @@ To set up the environment to run this bot, do the following steps:
 - Exectue the code using the command applicable for the OS.
 
 # Update logs 
+* **v2.2** (Jun 20, 2021)
+    * Added Rock Paper Scissors Lizard Spock as a minigame
+    * Adjusted points for the minigame so that the score risk is the same for different games
+    
 * **v2.1.2** (Jun 18, 2021)
     * Removed undesired shadow realm commands
     * Shows the progress when reporting a point change
@@ -137,6 +141,5 @@ To set up the environment to run this bot, do the following steps:
 
 # Future Updates 
 * **Minigame:** Memes
-* **Minigame:** Rock paper scissors
 * **Admin:** Adding automated voting generation
     
