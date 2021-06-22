@@ -141,5 +141,6 @@ To set up the environment to run this bot, do the following steps:
 
 # Future Updates 
 * **Minigame:** Memes
+* **Minigame:** Trivia quiz
 * **Admin:** Adding automated voting generation
     

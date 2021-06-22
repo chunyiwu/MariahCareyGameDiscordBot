@@ -78,8 +78,8 @@ phase = -1              # the phase of the game
 debugMode = 1
 
 # bot version
-version_num = '2.1.2'
-last_update = '2021-06-18'
+version_num = '2.2'
+last_update = 'June 20, 2021'
 
 
 # alphabet string
