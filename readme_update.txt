@@ -1,5 +1,2 @@
-* **v2.1.2** (Jun 18, 2021)
-    * Removed undesired shadow realm commands
-    * Shows the progress when reporting a point change
-    * Added the ability to abort a self report
-    * Added showing progress in the shadow realm for debug purpose
+* **v2.2.1** (Jun 18, 2021)
+    * Added "never mind" and "nevermind" as possible alternatives for "nvm"

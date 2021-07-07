@@ -943,7 +943,8 @@ async def report_self(discord_id):
         await chans[iichan_cmd].send("Beep. Seems like you're currently taking a break from the game? Please rejoin before reporting the hit!")
         
     else:
-        await chans[iichan_cmd].send("Beep Bop. Comment within the next 60 seconds if you would like to do so, or type 'x' to skip! Type 'nvm' if it's a misclick!")
+        await chans[iichan_cmd].send("Beep Bop. Comment within the next 60 seconds if you would like to do so, or type 'x' to skip!\n" +\
+                                     "Type 'nvm' if it's a misclick!")
         
         try:
             def same_user(msg):
@@ -964,7 +965,7 @@ async def report_self(discord_id):
                 await chans[iichan_cmd].send("Beep bop. Reported " + players[ind].name + " for " + str(p) + " point!", file=discord.File(img_pnt[p+2]))
                 await chans[iichan_pnt].send("Beep bop. Reported " + players[ind].name + " for " + str(p) + " point!"+"\n\n"+progress_str(), file=discord.File(img_pnt[p+2]))
                 
-            elif msg.content.lower() == 'nvm':
+            elif msg.content.lower() == 'nvm' or msg.content.lower() == 'nevermind' or msg.content.lower() == 'never mind':
                 await chans[iichan_cmd].send("Beep bop. Aborting the hit reporting.")
                 
             else:
