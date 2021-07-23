@@ -1992,7 +1992,7 @@ async def on_reaction_add(rxn, user):
                 await gam_carrot()
                 
             if ( rxn.emoji == rxn_rpsls ):
-                await chans[iichan_sha].send(user.name+"; rspls")
+                await chans[iichan_sha].send(user.name+"; rpsls")
                 await gam_rpsls()
             
             elif rxn.emoji == rxn_trivia:
