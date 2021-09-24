@@ -52,7 +52,18 @@ To set up the environment to run this bot, do the following steps:
     DISCORD_GUILD = [server name]
     ```
 
-**Step 3: Run the code!**
+**Step 3: Set up the Discord server**
+The server should have the following channels:
+* information
+* announcements
+* point-changes
+* commands
+* risky-click
+* mini-games
+* shadow-realm
+* chit-chat
+
+**Step 4: Run the code!**
 
 - Exectue the code using the command applicable for the OS.
 
