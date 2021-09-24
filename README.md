@@ -59,8 +59,10 @@ The server should have the following channels:
 * point-changes
 * commands
 * risky-click
-* mini-games
+* voting
+* admin-corner
 * shadow-realm
+* mini-games
 * chit-chat
 
 **Step 4: Run the code!**
