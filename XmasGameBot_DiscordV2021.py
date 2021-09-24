@@ -615,6 +615,7 @@ iichan_vot = 5
 iichan_adm = 6
 iichan_sha = 7
 iichan_gam = 8
+iichan_cht = 9
 
 
 # data storages
@@ -673,6 +674,9 @@ async def get_channels():
         
         if ( chan.name == "mini-games" ):
             chans[iichan_gam] = chan
+            
+        if ( chan.name == "chit-chat"):
+            chans[iichan_cht] = chan
             
     return 1
             
@@ -1856,6 +1860,7 @@ async def on_message(msg):
                 "debug make link\n"+\
                 "debug resolve all links\n" +\
                 "howdy\n"+\
+                "chitchat *\n"+\
                 "")
         
         if msg.content.lower() == "list player":
@@ -1927,6 +1932,9 @@ async def on_message(msg):
         if msg.content.lower() == 'howdy':
             await chans[iichan_sha].send('howdy pardner')
             
+            
+        if msg.content.lower().startswith("chitchat "):
+            await chans[iichan_cht].send(msg.content[9:])
             
             
         if ( "middayalert" in msg.content ):
