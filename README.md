@@ -43,6 +43,7 @@ To set up the environment to run this bot, do the following steps:
     * `asyncio`
     * `discord`
     * `python-dotenv`
+    * `numpy`
     
 - Create a file named ".env", and enter the following:
 
