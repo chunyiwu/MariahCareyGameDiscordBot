@@ -66,6 +66,8 @@ The server should have the following channels:
 * mini-games
 * chit-chat
 
+In addition, invite the Automatebot <https://automatebot.app/board> to the server, and set up an alert everyday at noon to send the message "middayalert" to #shadow-realm. This is what drives the time-related triggers for the bot.
+
 **Step 4: Run the code!**
 
 - Exectue the code using the command applicable for the OS.
