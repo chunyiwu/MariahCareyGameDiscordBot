@@ -157,7 +157,4 @@ The server should have the following channels:
 * **Minigame:** Memes
 * **Minigame:** Trivia quiz
 * **Admin:** Adding automated voting generation
-
-# Known bug
-* In the risky click channel, the time is displayed in UTC, not Central Standard Time
     
