@@ -71,8 +71,13 @@ In addition, invite the Automatebot <https://automatebot.app/board> to the serve
 **Step 4: Run the code!**
 
 - Exectue the code using the command applicable for the OS.
+  (On Google Cloud, use "nohup python3 XmasGameBot_Discord.py y &")
 
 # Update logs 
+* **v3.0** (Nov 4, 2022)
+    * Fixed the bug for showing result
+    * Added more links to the risky click game
+
 * **v2.2** (Jun 20, 2021)
     * Added Rock Paper Scissors Lizard Spock as a minigame
     * Adjusted points for the minigame so that the score risk is the same for different games
