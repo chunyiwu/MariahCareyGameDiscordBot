@@ -1,0 +1,88 @@
+0, 1638385167.815243, E, 3, 
+1, 1638395581.881117, C, 2, I was scrolling through TikTok
+2, 1638395920.072393, J, 1, Tiktok 😦
+3, 1638467999.999985, J, -1, risky link was safe!
+4, 1638502359.114489, G, 1, 
+5, 1638506181.418868, J, 1, Tiktok…
+6, 1638547674.482934, G, 1, 
+7, 1638550099.29564, E, 1, I like the bublé cover
+8, 1638554399.999985, CHJ, -1, risky link was safe!
+9, 1638566172.000841, J, 1, Sigh
+10, 1638640799.999985, J, 1, risky link was a hit!
+11, 1638688398.530138, J, 1, 
+12, 1638717843.774772, MC, 1, Tiktok again
+13, 1638721731.987569, CM, 1, Jim’s stupid tiktoks again
+14, 1638727199.999985, CJ, 1, risky link was a hit!
+15, 1638751798.340048, C, 1, A friend sang it after I explained the rules 🤬
+16, 1638813599.999985, GMACLH, -1, risky link was safe!
+17, 1638816543.523261, J, 1, 
+18, 1638818684.71146, J, 1, I’m done with tiktok till I’m at 0 again.
+19, 1638899999.999985, G, 1, risky link was a hit!
+20, 1638915075.595861, F, 1, Stupid Marshalls and their Christmas spirit
+21, 1638986399.999985, G, 1, risky link was a hit!
+22, 1639064478.278809, D, 1, my partner's 14yo sibling sent me a video of an arduino cover lmao
+23, 1639072799.999985, GC, 1, risky link was a hit!
+24, 1639159199.999985, G, 1, risky link was a hit!
+25, 1639166041.562676, B, 1, I entered the theory classroom for the final and someone fucking bombed me with the piano 😔
+26, 1639196443.353815, C, 1, YouTube video 😭
+27, 1639203922.560159, D, 1, my friend fucked me over at my own event smh
+28, 1639231236.528607, C, 1, Instagram 🤦
+29, 1639245599.999985, D, 1, risky link was a hit!
+30, 1639261520.861975, AI, 1, Antonio’s gf got us
+31, 1639266597.832318, J, 1, At a house warming… first of I’m sure many
+32, 1639272319.091284, F, 1, Christmas playlist! 😭
+33, 1639326637.385174, J, 1, Hulu 😦
+34, 1639329375.560014, K, 1, Dancing at Barbs last night. My dumb ass was too drunk to change the points last night - I was trying to do it in the point changes thread
+35, 1639331999.999985, GMACLDKIJ, -1, risky link was safe!
+36, 1639334410.655055, H, 1, coworker betrayed me 😔
+37, 1639357376.909766, K, 1, Got a hit from the “Classic Christmas Music” playlist
+38, 1639357962.405943, D, 1, HEB 🥱🥱
+39, 1639367588.740835, N, 1, 
+40, 1639418399.999985, K, 1, risky link was a hit!
+41, 1639429425.071165, D, 1, keep getting sabotaged now 🧖
+42, 1639486094.439476, C, 1, Fucking anti-masker fucking singing fucking the song about not wanting fucking masks for Christmas
+43, 1639497427.328648, H, 1, co-op decorating party playlist got me asdfghfkdgalaj
+44, 1639504799.999985, CDKI, 1, risky link was a hit!
+45, 1639570079.597467, A, 1, Instagram got me
+46, 1639591199.999985, C, 1, risky link was a hit!
+47, 1639591337.89513, C, 1, The front office was playing the song this morning 🤬
+48, 1639617232.230392, G, 1, 
+49, 1639625996.395361, H, 1, secret santa playlist 😔
+50, 1639677599.999985, GMACDKJ, -1, risky link was safe!
+51, 1639678019.717831, N, 1, My dental school making sure to fuck up every aspect of my life
+52, 1639697527.383104, C, 1, One of my seniors started playing it right after we finished making our silver ornaments with chemistry.
+53, 1639697577.660796, C, 1, Someone ran down the hallway playing it during passing period this morning
+54, 1639710228.566927, I, 1, RATS
+55, 1639712273.829644, I, 1, Fucking pandora
+56, 1639763999.999985, GCK, -1, risky link was safe!
+57, 1639768975.972626, K, 1, Facebook Shorts finally got me
+58, 1639772145.851219, C, 1, Poke house got me 😭
+59, 1639775218.428025, E, 1, Thin walls at school
+60, 1639775247.487796, E, 1, Then I started humming it
+61, 1639850399.999985, CD, -1, risky link was safe!
+62, 1639857984.682204, G, 1, Ughhh. Stupid nail salon playing Christmas station.
+63, 1639936799.999985, C, -1, risky link was safe!
+64, 1640019139.409705, C, 1, Fucking Instagram stories 😩
+65, 1640038202.608258, G, 1, Petco got me 😑
+66, 1640062092.086116, D, 1, at a bar 🙄
+67, 1640109599.999985, CDKJ, -1, risky link was safe!
+68, 1640195999.999985, D, 2, risky link was a hit!
+69, 1640267761.158508, C, 2, Instagram stories about a dog wanting food
+70, 1640272478.692596, C, 2, I GET IN THE CAR AND MY MOM JUST STARTS SINGING IT
+71, 1640282399.999985, DK, 2, risky link was a hit!
+72, 1640292203.82715, B, 2, Pedicure ._.
+73, 1640292237.616271, B, 2, Another one 🦀💀
+74, 1640294091.990099, B, 2, IHOP 🥸🍅🇨🇳
+75, 1640309861.743529, D, 2, trying to be a good child and watching a Christmas movie with my family 😭
+76, 1640363749.361491, K, 2, Last minute Christmas shopping with my brother
+77, 1640368799.999985, CDKJ, -2, risky link was safe!
+78, 1640394413.859063, J, 2, Piece of shit person driving past my Uber blasting the song
+79, 1640400742.597867, I, 2, goddamnit carlos
+80, 1640405599.16568, K, 2, A goddamn video of a guy walking up stairs with leaves on the ground. Why tf would you choose the song for the background music?!?
+81, 1640448445.409323, D, 2, on my way OUT of Starbucks 😭
+82, 1640453592.49786, G, 2, Ughh.
+83, 1640455199.999985, CDKJ, 2, risky link was a hit!
+84, 1640455199.999985, GCDKJ, -2, risky link was safe!
+85, 1640455199.999985, GCDKJ, -2, risky link was safe!
+86, 1640455199.999985, GCDKJ, -2, risky link was safe!
+87, 1640455199.999985, GCDKJ, -2, risky link was safe!
