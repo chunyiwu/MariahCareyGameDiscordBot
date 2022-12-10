@@ -8,7 +8,7 @@ Version 2.3, Last updated on November 4, 2022
 Code available on [GitHub](https://github.com/chunyiwu/MariahCareyGameDiscordBot)
 
 Developed by Chun-Yi Wu, with help from:
-* Andrew Vernon: *Bg, Bd, R, L, T*
+* Andrew Thompson: *Bg, Bd, R, L, T*
 * Lizzie Jouett: *Bg, Bd, R, L, T*
 * Antonio Roman: *Bd, R, L, V*
 * Angel Roman: *Bd, L, I*
