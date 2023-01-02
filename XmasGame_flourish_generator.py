@@ -16,7 +16,7 @@ import re
 
 
 # define file names
-record_dir = "record/2021/" #"old_files/2020/" #
+record_dir = "old_files/2022/record/" #"old_files/2020/" #
 fname_player = record_dir + 'player.txt'
 fname_record = record_dir + 'record.txt'
 fname_info   = record_dir + 'info.txt'
